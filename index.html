@@ -101,17 +101,21 @@
             margin: 1rem 0;
         }
         
-        .nav-menu a {
+        .nav-menu button {
             color: white;
-            text-decoration: none;
+            background: none;
+            border: none;
             font-size: 1.1rem;
             display: block;
             padding: 10px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             transition: color 0.3s;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
         }
         
-        .nav-menu a:hover {
+        .nav-menu button:hover {
             color: #fbbf24;
         }
         
@@ -337,6 +341,25 @@
             text-align: center;
         }
         
+        /* Legal Content */
+        .legal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .legal-content h3 {
+            color: #1e40af;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .legal-content h3:first-child {
+            margin-top: 0;
+        }
+        
         /* Mobile Responsiveness */
         @media (min-width: 768px) {
             .hero h1 {
@@ -355,6 +378,10 @@
             .team-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .google-form {
+                height: 818px;
+            }
         }
         
         @media (min-width: 1024px) {
@@ -367,12 +394,6 @@
             }
         }
         
-        /* Emoji styles */
-        .emoji {
-            font-size: 1.2em;
-            margin-right: 0.5rem;
-        }
-        
         /* List styles */
         ul {
             padding-left: 1.5rem;
@@ -380,25 +401,6 @@
         
         li {
             margin: 0.5rem 0;
-        }
-        
-        /* Privacy and Terms styles */
-        .legal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            margin: 2rem 0;
-        }
-        
-        .legal-content h3 {
-            color: #1e40af;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .legal-content h3:first-child {
-            margin-top: 0;
         }
         
         /* Overlay for mobile menu */
@@ -419,13 +421,13 @@
     </style>
 </head>
 <body>
-    <div class="overlay" onclick="closeNav()"></div>
+    <div class="overlay"></div>
     
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">🏡 Namma Alpyne</div>
-                <div class="hamburger" onclick="toggleNav()">
+                <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -435,14 +437,14 @@
         
         <nav class="nav-menu">
             <ul>
-                <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('team')">Meet The Team</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('promise')">Our Promise</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('progress')">Progress Report</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('vision')">Our Vision</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('support')">Support Us</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a></li>
-                <li><a href="javascript:void(0)" onclick="showPage('terms')">Terms & Copyright</a></li>
+                <li><button data-page="home">Home</button></li>
+                <li><button data-page="team">Meet The Team</button></li>
+                <li><button data-page="promise">Our Promise</button></li>
+                <li><button data-page="progress">Progress Report</button></li>
+                <li><button data-page="vision">Our Vision</button></li>
+                <li><button data-page="support">Support Us</button></li>
+                <li><button data-page="privacy">Privacy Policy</button></li>
+                <li><button data-page="terms">Terms & Copyright</button></li>
             </ul>
         </nav>
     </header>
@@ -456,9 +458,9 @@
                     <p>A mix of experienced members and new faces, driven by the goal to serve every resident with care, honesty, and fairness.</p>
                     
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary" onclick="showPage('team')">👥 Meet The Team</a>
-                        <a href="#" class="btn btn-secondary" onclick="showPage('promise')">👉 Our Vision & Promise</a>
-                        <a href="#" class="btn btn-secondary" onclick="showPage('progress')">👉 See Our Progress</a>
+                        <button class="btn btn-primary" data-page="team">👥 Meet The Team</button>
+                        <button class="btn btn-secondary" data-page="promise">👉 Our Vision & Promise</button>
+                        <button class="btn btn-secondary" data-page="progress">👉 See Our Progress</button>
                     </div>
                 </div>
             </section>
@@ -526,7 +528,7 @@
                         <p>Let's work together to make Mantri Alpyne a happier, safer, and smarter home for all.</p>
                         
                         <div class="cta-buttons">
-                            <a href="#" class="btn btn-primary" onclick="showPage('support')">👉 Support Us – Share Your Suggestions</a>
+                            <button class="btn btn-primary" data-page="support">👉 Support Us – Share Your Suggestions</button>
                         </div>
                     </div>
                 </div>
@@ -727,3 +729,251 @@
                             <li>Make Uniservice respond faster and solve problems more quickly</li>
                             <li>Talk to the lift company to fix repeated breakdowns</li>
                         </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🚗 Security & Smart Solutions</h4>
+                        <ul>
+                            <li>Improve car park security using cameras and tech solutions</li>
+                            <li>Raise the compound wall for better safety and appearance</li>
+                            <li>Install EV charging points at low cost, so electric vehicles can be supported</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🏢 Clubhouse Improvements</h4>
+                        <ul>
+                            <li>Fix the AC in the clubhouse</li>
+                            <li>Repair or replace old gym machines</li>
+                            <li>Paint and refresh the party hall</li>
+                            <li>Set up simple software for clubhouse access and hall bookings</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>📚 Library Revamp</h4>
+                        <ul>
+                            <li>Fix and organize the library so it can be useful again</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🎨 Looks & Community Feel</h4>
+                        <ul>
+                            <li>Repair damaged ceilings on ground floors of blocks</li>
+                            <li>Paint pergola structures at entrances to make them look nicer</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🎉 Celebrations & Events</h4>
+                        <ul>
+                            <li>Take feedback from residents on how they would like to contribute to festivals like Ganapathy Habba, Rajyotsava, and Independence Day. Streamline the contribution process and accounting.</li>
+                            <li>Make sure celebrations and flea markets are not too noisy or crowded</li>
+                            <li>Create simple rules to keep events fun and respectful for everyone</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <p>If we have missed anything you would like to see, please submit your suggestions on the <strong>Support Us</strong> page.</p>
+                        <h3>🙏 With your support, we will keep making practical, cost-friendly improvements for our community. Let's work together for a better, safer, and happier home.</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Support Page -->
+        <div id="support" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>💪 Support Us</h2>
+                    <p style="text-align: center; margin-bottom: 2rem;">Share your suggestions and let us know how we can serve you better. Your feedback helps us build a stronger community together.</p>
+                    
+                    <div class="form-section">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSS7ydxdBBcTdTJq2bTJEtXnhWtV213Esvr2nSoEDXdRab4Q/viewform?embedded=true" 
+                                width="100%" 
+                                height="600" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0"
+                                class="google-form">
+                            Loading…
+                        </iframe>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <p><strong>🙏 Thank you for your support and valuable feedback!</strong></p>
+                        <p>Together, we can make Mantri Alpyne an even better place to call home.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Privacy Page -->
+        <div id="privacy" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>🔒 Privacy Policy</h2>
+                    
+                    <div class="legal-content">
+                        <p>We respect your privacy and are committed to protecting your personal information.</p>
+                        
+                        <h3>1. What Information We Collect</h3>
+                        <p>When you fill out the <strong>Support Us</strong> form, we collect:</p>
+                        <ul>
+                            <li>Your Name</li>
+                            <li>Apartment Number</li>
+                            <li>Phone Number</li>
+                            <li>Your Suggestions</li>
+                        </ul>
+                        
+                        <h3>2. How We Use Your Information</h3>
+                        <p>We use your information only to:</p>
+                        <ul>
+                            <li>Understand your suggestions and feedback</li>
+                            <li>Improve our community services</li>
+                            <li>Contact you if needed about your suggestions</li>
+                        </ul>
+                        
+                        <h3>3. Your Information is Safe</h3>
+                        <p>We will never share your personal information with any third party or use it for marketing purposes. Your data is used only by our election team and is stored securely.</p>
+                        
+                        <h3>4. Your Rights</h3>
+                        <p>You can request us to delete your information anytime by contacting us at:</p>
+                        <p>📧 <a href="mailto:namma.alpyne@gmail.com">namma.alpyne@gmail.com</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Terms Page -->
+        <div id="terms" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>📜 Terms and Conditions</h2>
+                    
+                    <div class="legal-content">
+                        <p>Welcome to our Namma Alpyne Association Election Campaign website. By using this site, you agree to the following:</p>
+                        
+                        <ol>
+                            <li>The content on this website is for information only related to the association election.</li>
+                            <li>We try to keep all information accurate and up to date, but we are not responsible for any mistakes.</li>
+                            <li>Your use of the website is at your own risk.</li>
+                            <li>We do not guarantee that the website will always work without interruptions or errors.</li>
+                            <li>The suggestions you provide through the Support Us form will be used only to improve our community.</li>
+                            <li>We reserve the right to update these terms anytime without prior notice.</li>
+                        </ol>
+                        
+                        <h3>© Copyright Notice</h3>
+                        <p><strong>© 2025 Namma Alpyne Team</strong><br>
+                        All rights reserved.</p>
+                        
+                        <p>No part of this website may be copied, shared, or reproduced in any form without written permission.</p>
+                        
+                        <p>For more information write to:<br>
+                        📧 <a href="mailto:namma.alpyne@gmail.com">Namma Alpyne Team</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Namma Alpyne Team - Building a Stronger, Happier Community</p>
+            <p>📧 <a href="mailto:namma.alpyne@gmail.com" style="color: #fbbf24;">namma.alpyne@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple navigation system using data attributes
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                
+                // Close mobile menu
+                closeNav();
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Update page title
+                updatePageTitle(pageId);
+            }
+        }
+        
+        function updatePageTitle(pageId) {
+            const titles = {
+                'home': 'Namma Alpyne Team - Building a Stronger Community',
+                'team': 'Meet The Team - Namma Alpyne',
+                'promise': 'Our Promise - Namma Alpyne',
+                'progress': 'Progress Report - Namma Alpyne',
+                'vision': 'Our Vision - Namma Alpyne',
+                'support': 'Support Us - Namma Alpyne',
+                'privacy': 'Privacy Policy - Namma Alpyne',
+                'terms': 'Terms & Copyright - Namma Alpyne'
+            };
+            document.title = titles[pageId] || 'Namma Alpyne Team';
+        }
+        
+        function toggleNav() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        
+        function closeNav() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.addEventListener('click', toggleNav);
+            
+            // Overlay click to close menu
+            const overlay = document.querySelector('.overlay');
+            overlay.addEventListener('click', closeNav);
+            
+            // Navigation buttons
+            const navButtons = document.querySelectorAll('[data-page]');
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const navMenu = document.querySelector('.nav-menu');
+                const hamburger = document.querySelector('.hamburger');
+                
+                if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                    closeNav();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
