@@ -264,14 +264,16 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
             margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #6b7280;
             border: 4px solid #f97316;
+            overflow: hidden;
+            background: #e5e7eb; /* Fallback for when images are missing */
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .team-member h4 {
@@ -581,74 +583,95 @@
                     
                     <div class="team-grid">
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
+                            <div class="team-photo">
+                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
+                            </div>
                             <h4>Ashwin Kumar S G</h4>
                             <div class="age">Age 40</div>
                             <p>Software Engineer with a strong passion for social service and community development. Currently serving as President of Mantri Alpyne, he focuses on enhancing security, facilities, and the overall quality of life in the community. Previously served as Block Committee Member for H Block for 4 years. As a dedicated Rotary member, he led projects like donating hearing aids, organizing blood donation camps, and large health drives. His hobbies include badminton, painting, crafts, and volunteering for social causes. Committed to making Mantri Alpyne a safer, cleaner, and more vibrant place to live.</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
+                            <div class="team-photo">
+                                <img src="images/jacob.jpeg" alt="Jacob John">
+                            </div>
                             <h4>Jacob John</h4>
                             <div class="age">Content to be added</div>
                             <p>Placeholder - content to be added later</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
+                            <div class="team-photo">
+                                <img src="images/jayjit.jpeg" alt="Jayjit Basu">
+                            </div>
                             <h4>Jayjit Basu</h4>
                             <div class="age">Age 51</div>
                             <p>Science graduate with 28 years of professional experience and part of the Alpyne community for 10 years. Served as Treasurer for the last 2 years with strong administrative, technical, and problem-solving expertise. Focused on structural repairs to reduce water leaks in B1 and B2, improving clubhouse facilities. Plans installation of community EV charging stations and implementing sustainable solutions to lower utility costs. Enjoys trekking, exploring new technologies, and activities that promote health, happiness, and community bonding.</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
+                            <div class="team-photo">
+                                <img src="images/prakash.jpeg" alt="R. Prakash">
+                            </div>
                             <h4>R. Prakash</h4>
                             <div class="age">Age 63</div>
                             <p>Around 35 years of experience in major construction companies, specializing in engineering and maintenance. Served as BCM for 2 years and Vice President for 2 years of the current management committee. His hobbies include music, reading, world affairs, trekking, and cricket. Intends to promote the health and happiness of the society by encouraging performing arts, yoga, and dhyana. Committed to organizing activities like trekking and sports to bring residents together and foster a vibrant community.</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
+                            <div class="team-photo">
+                                <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
+                            </div>
                             <h4>Vishwas K. N.</h4>
                             <div class="age">Age 43</div>
                             <p>21 years of experience in software development and management. Served as Joint Secretary for the last 2 years with strong technical and administrative skills. Focused on Property Tax management, E-Khata, Association Data management, software automation, and process improvements. Passionate about building a process-driven Association with a strong framework to ensure sustained growth and improved welfare for all residents. Enjoys listening to music and exploring new technologies.</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
-                            <h4>G. Srinivas</h4>
-                            <div class="age">Age 45</div>
-                            <p>22 years of professional experience as an IT professional with experience managing a mid-sized apartment complex. Now keen to contribute to a larger community like ours. Brings strong technical and problem-solving skills to support efficient operations. Intends to help continue the good work and contribute to the well-being of all residents. Enjoys natural farming and promoting sustainable living practices in his free time.</p>
+                            <div class="team-photo">
+                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
+                            </div>
+                            <h4>Dr. Mohan M. S.</h4>
+                            <div class="age">Age 55</div>
+                            <p>Practicing as a Pediatrician since 1999, providing care to children for over two decades. Played a key role in planning and executing the rainwater harvesting system at Alpyne. His hobbies include farming and trekking, reflecting his love for nature. In his second phase of service, intends to expand the rainwater harvesting project and explore individual flat water metering to promote fair and efficient water usage. Committed to making Alpyne greener, more sustainable, and well-managed.</p>
                         </div>
-                        
+
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
+                            <div class="team-photo">
+                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                            </div>
+                            <h4>Ramachandra Rao G. S.</h4>
+                            <div class="age">Age 68</div>
+                            <p>Over 40 years of experience in the telecom sector, including 30 years of field work and 10 years in administration as AGM and DGM in BSNL. Strong volunteer for the Ganesha Mantapa, contributing to temple management and community activities. Though new to society management, committed to serving with dedication and care. Focuses on transparency, discipline, and practical solutions. Enjoys community service and social welfare activities.</p>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
+                            </div>
+                            <h4>Sadashiva Yogendra</h4>
+                            <div class="age">Age 46</div>
+                            <p>23 years of experience in the IT industry and managed two startup companies with strong technical and management skills. Though new to society management, eager to contribute expertise for the community's benefit. His interests include finance, economics, and history, helping him take a thoughtful, balanced approach to problem solving. Dedicated to creating a positive, well-managed environment for all residents. Enjoys reading about economic trends and historical events.</p>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="images/rajesh.jpeg" alt="Rajesh Shet">
+                            </div>
                             <h4>Rajesh Shet</h4>
                             <div class="age">Age 44</div>
                             <p>21 years of experience in the Automotive Industry and management roles. Served as BCM of H Block for the last couple of years. Though new to society management, passionate about serving the community with a practical, organized approach. Focuses on proper maintenance, safety and security, acting as a collective voice for residents, addressing grievances fairly, and enforcing community rules. Enjoys watching movies and volunteering in social service activities.</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="team-photo">👤</div>
-                            <h4>Sadashiva Yogendra</h4>
-                            <div class="age">Age 46</div>
-                            <p>23 years of experience in the IT industry and managed two startup companies with strong technical and management skills. Though new to society management, eager to contribute expertise for the community's benefit. His interests include finance, economics, and history, helping him take a thoughtful, balanced approach to problem solving. Dedicated to creating a positive, well-managed environment for all residents. Enjoys reading about economic trends and historical events.</p>
+                            <div class="team-photo">
+                                <img src="images/srinivas.jpeg" alt="G. Srinivas">
+                            </div>
+                            <h4>G. Srinivas</h4>
+                            <div class="age">Age 45</div>
+                            <p>22 years of professional experience as an IT professional with experience managing a mid-sized apartment complex. Now keen to contribute to a larger community like ours. Brings strong technical and problem-solving skills to support efficient operations. Intends to help continue the good work and contribute to the well-being of all residents. Enjoys natural farming and promoting sustainable living practices in his free time.</p>
                         </div>
-                        
-                        <div class="team-member">
-                            <div class="team-photo">👤</div>
-                            <h4>Ramachandra Rao G. S.</h4>
-                            <div class="age">Age 68</div>
-                            <p>Over 40 years of experience in the telecom sector, including 30 years of field work and 10 years in administration as AGM and DGM in BSNL. Strong volunteer for the Ganesha Mantapa, contributing to temple management and community activities. Though new to society management, committed to serving with dedication and care. Focuses on transparency, discipline, and practical solutions. Enjoys community service and social welfare activities.</p>
-                        </div>
-                        
-                        <div class="team-member">
-                            <div class="team-photo">👤</div>
-                            <h4>Dr. Mohan M. S.</h4>
-                            <div class="age">Age 55</div>
-                            <p>Practicing as a Pediatrician since 1999, providing care to children for over two decades. Played a key role in planning and executing the rainwater harvesting system at Alpyne. His hobbies include farming and trekking, reflecting his love for nature. In his second phase of service, intends to expand the rainwater harvesting project and explore individual flat water metering to promote fair and efficient water usage. Committed to making Alpyne greener, more sustainable, and well-managed.</p>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -821,7 +844,8 @@
                     
                     <div style="text-align: center; margin: 2rem 0;">
                         <p>If we have missed anything you would like to see, please submit your suggestions on the <a href="#" data-page="support" class="inline-link">Support Us</a> page.</p>
-                        <h3> With your support, we will keep making practical, cost-friendly improvements for our community. Let's work together for a better, safer, and happier home.</h3>
+                        <br>
+                        <p> With your support, we will keep making practical, cost-friendly improvements for our community. Let's work together for a better, safer, and happier home.</p>
                     </div>
                 </div>
             </section>
