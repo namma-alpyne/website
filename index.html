@@ -259,9 +259,15 @@
         /* Team Grid */
         .team-grid {
             display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        /* Home page candidate grid - mobile 3x3 layout */
+        #home .team-grid {
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
-            margin: 2rem 0;
         }
         
         .team-member {
@@ -489,20 +495,20 @@
             display: block;
         }
         
-        /* Mobile-specific styles for candidate cards */
+        /* Mobile-specific styles for candidate cards - only on home page */
         @media (max-width: 767px) {
-            .team-member {
+            #home .team-member {
                 padding: 1rem 0.5rem;
             }
             
-            .team-photo {
+            #home .team-photo {
                 width: 60px;
                 height: 60px;
                 margin: 0 auto 0.5rem;
                 border-width: 2px;
             }
             
-            .team-member h4 {
+            #home .team-member h4 {
                 font-size: 0.9rem;
                 margin-bottom: 0;
                 line-height: 1.2;
