@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DZLQQNE7K"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-3DZLQQNE7K');
+        </script>
+
+    <meta name="google-site-verification" content="mrizIowPM-zPzeCfGVxmlKfp3iyXSrY1Emj2eK5ACME" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Alpyne Team - Building a Safer, Stronger, Happier Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e40af 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+            text-decoration: none;
+        }
+        
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            max-width: 300px;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e40af 100%);
+            transition: 0.3s;
+            padding-top: 80px;
+            z-index: 999;
+        }
+        
+        .nav-menu.active {
+            right: 0;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            padding: 0 20px;
+        }
+        
+        .nav-menu li {
+            margin: 1rem 0;
+        }
+        
+        .nav-menu button {
+            color: white;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: color 0.3s;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .nav-menu button:hover {
+            color: #fbbf24;
+        }
+        
+        /* Main Content */
+        main {
+            margin-top: 80px;
+        }
+        
+        .page {
+            display: none;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            color: #1e40af;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section h3 {
+            font-size: 1.5rem;
+            color: #f97316;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature h4 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 4px solid #f97316;
+            overflow: hidden;
+            background: #e5e7eb; /* Fallback for when images are missing */
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-member h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .team-member .age {
+            color: #f97316;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        /* Clickable candidate styles */
+        .candidate-clickable {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .candidate-clickable:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Progress Report */
+        .progress-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .progress-category h4 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .achievements {
+            list-style: none;
+        }
+        
+        .achievements li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .achievements li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .google-form {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1e40af;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fbbf24;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin: -1rem 0 2rem 0;
+        }
+        .back-to-home a {
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+
+        .inline-link {
+            color: #1e40af;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .inline-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Legal Content */
+        .legal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .legal-content h3 {
+            color: #1e40af;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .legal-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .hero .cta-buttons {
+                max-width: 900px; /* Give more space for 3 buttons */
+            }
+
+            .hero .cta-buttons .btn {
+                flex: 1; /* Make buttons equal width */
+            }
+            
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .google-form {
+                height: 818px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* List styles */
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        /* Overlay for mobile menu */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+            display: none;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        /* Mobile-specific styles for candidate cards */
+        @media (max-width: 767px) {
+            .team-member {
+                padding: 1rem 0.5rem;
+            }
+            
+            .team-photo {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 0.5rem;
+                border-width: 2px;
+            }
+            
+            .team-member h4 {
+                font-size: 0.9rem;
+                margin-bottom: 0;
+                line-height: 1.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo" data-page="home">🏡 Namma Alpyne</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><button data-page="home">Home</button></li>
+                <li><button data-page="team">Namma Alpyne Team</button></li>
+                <li><button data-page="promise">Our Promise</button></li>
+                <li><button data-page="progress">Community Progress Report</button></li>
+                <li><button data-page="vision">Our Vision</button></li>
+                <li><button data-page="support">Support Us</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="container">
+                    <h1>Namma Alpyne – Building a Safer, Stronger, Happier Community</h1>
+                    <p>A team of experienced members and fresh faces, united by the goal to serve every resident with care, honesty, and fairness.</p>
+                    
+
+                </div>
+            </section>
+            
+            <!-- Candidates Section -->
+            <section class="section">
+                <div class="container">
+                    <h2>👥 Meet Our Candidates</h2>   
+                    <div class="team-grid">
+                        <div class="team-member candidate-clickable" data-candidate="ramachandra">
+                            <div class="team-photo">
+                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                            </div>
+                            <h4>Ramachandra Rao G. S.</h4>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="sadashiva">
+                            <div class="team-photo">
+                                <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
+                            </div>
+                            <h4>Sadashiva Yogendra</h4>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="rajesh">
+                            <div class="team-photo">
+                                <img src="images/rajesh.jpeg" alt="Rajesh Shet">
+                            </div>
+                            <h4>Rajesh Shet</h4>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="jayjit">
+                            <div class="team-photo">
+                                <img src="images/jayjit.jpeg" alt="Jayjit Basu">
+                            </div>
+                            <h4>Jayjit Basu</h4>
+                        </div>
+                        
+                        <div class="team-member candidate-clickable" data-candidate="mohan">
+                            <div class="team-photo">
+                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
+                            </div>
+                            <h4>Dr. Mohan M. S.</h4>
+                        </div>
+                    
+                        <div class="team-member candidate-clickable" data-candidate="ashwin">
+                            <div class="team-photo">
+                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
+                            </div>
+                            <h4>Ashwin Kumar S G</h4>
+                        </div>
+                        
+                        <div class="team-member candidate-clickable" data-candidate="jacob">
+                            <div class="team-photo">
+                                <img src="images/jacob.jpeg" alt="Jacob John">
+                            </div>
+                            <h4>Jacob John</h4>
+                        </div>
+                                                
+                        <div class="team-member candidate-clickable" data-candidate="prakash">
+                            <div class="team-photo">
+                                <img src="images/prakash.jpeg" alt="R. Prakash">
+                            </div>
+                            <h4>R. Prakash</h4>
+                        </div>
+                        
+                        <div class="team-member candidate-clickable" data-candidate="vishwas">
+                            <div class="team-photo">
+                                <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
+                            </div>
+                            <h4>Vishwas K. N.</h4>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn btn-primary" data-page="team">Learn More About Our Team</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="container">
+                    <h2>🏡 Together, We Build a Better Home</h2>
+                    
+                    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <p>In the previous term, with your support we focused on solving many long-standing legacy issues that affected daily life in our community. Now, we shift focus toward improving the <strong>"Namma Alpyne Experience"</strong> for everyone with practical upgrades, smarter solutions, and better services. We are committed to making sure every resident feels proud to live here.</p>
+                        <br>
+                        <p>With your continued support, we aim to build a home that feels safer, cleaner, and more connected for all residents.</p>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn btn-secondary" data-page="progress">See Our Community Progress Report</button>
+                    </div>
+                </div>
+            </section>
+
+         <section class="section">
+                <div class="container">
+                    <h2>🙏🏼  Appeal </h2>
+                    
+                    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <p>Thank you all for your cooperation and support over the last two years. We have learned a lot by interacting with you, and if elected again, we promise to apply these learnings to serve you better. We welcome all suggestions to make Namma Alpyne safer, stronger and happier community.</p>
+                        <br>
+                        <p>We humbly request 🙏🏼 your valuable vote to continue this journey together. </p>
+                    </div>
+                </div>
+            </section>
+            
+                        <section class="section">
+                <div class="container">
+                    <h2>⭐ Why Vote for Us?</h2>
+                    
+                    <ul style="list-style: none; padding: 0; max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #22c55e; font-size: 1.2rem;">✓</span>
+                            <strong style="color: #1e40af;">Transparent Communication</strong> - Simple, clear decisions and honest communication about all matters
+                        </li>
+                        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #22c55e; font-size: 1.2rem;">✓</span>
+                            <strong style="color: #1e40af;">Fair Solutions</strong> - Solutions that help all residents, not just a few
+                        </li>
+                        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #22c55e; font-size: 1.2rem;">✓</span>
+                            <strong style="color: #1e40af;">Better Facilities</strong> - Improved maintenance, security, and smart facility upgrades
+                        </li>
+                        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #22c55e; font-size: 1.2rem;">✓</span>
+                            <strong style="color: #1e40af;">Sustainable Living</strong> - Cost-effective solutions that promote green living
+                        </li>
+                        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #22c55e; font-size: 1.2rem;">✓</span>
+                            <strong style="color: #1e40af;">Community Events</strong> - Well-organized, respectful community events for everyone
+                        </li>
+                        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #22c55e; font-size: 1.2rem;">✓</span>
+                            <strong style="color: #1e40af;">Experienced Team</strong> - Perfect mix of experience and fresh energy
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="container">
+                    <h2>🚀 Our Mission for the Next Term</h2>
+                    
+                    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <ul>
+                            <li>Improve service response time and fix common issues faster</li>
+                            <li>Add EV charging points and smart parking solutions</li>
+                            <li>Upgrade the clubhouse, gym, library and kids play area</li>
+                            <li>Promote sustainability with better water and energy management</li>
+                            <li>Make community events well-organized, safe, and enjoyable</li>
+                            <li>Carefully listen to your suggestions and ideas, and put them into action</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <button class="btn btn-secondary" data-page="vision">Learn More About Our Vision</button>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <h3> Your Vote is Our Strength 🙏 </h3>
+                        <p>Let's work together to make Mantri Alpyne a happier, safer, and smarter home for all.</p>
+                        <br>
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary" data-page="support"> Support Us – Share Your Suggestions</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Team Page -->
+        <div id="team" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>👥 Namma Alpyne Team</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div class="team-grid">
+                        <div class="team-member" id="ramachandra">
+                            <div class="team-photo">
+                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                            </div>
+                            <h4>Ramachandra Rao G. S.</h4>
+                            <div class="age">Age 68</div>
+                            <p>Over 40 years of experience in the telecom sector, including 30 years of field work and 10 years in administration as AGM and DGM at BSNL. Strong volunteer for the Ganesha Mantapa, contributing to temple management and community activities. Though new to society management, committed to serving with dedication and care. Focuses on transparency, discipline, and practical solutions. Enjoys community service and social welfare activities.</p>
+                        </div>
+
+                        <div class="team-member" id="sadashiva">
+                            <div class="team-photo">
+                                <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
+                            </div>
+                            <h4>Sadashiva Yogendra</h4>
+                            <div class="age">Age 46</div>
+                            <p>23 years of experience in the IT industry with strong technical and management skills, managed two startup companies. Though new to society management, eager to contribute expertise for the community's benefit. His interests include finance, economics, and history, helping him take a thoughtful, balanced approach to problem solving. Dedicated to creating a positive, well-managed environment for all residents. Enjoys reading about economic trends and historical events.</p>
+                        </div>
+
+                        <div class="team-member" id="rajesh">
+                            <div class="team-photo">
+                                <img src="images/rajesh.jpeg" alt="Rajesh Shet">
+                            </div>
+                            <h4>Rajesh Shet</h4>
+                            <div class="age">Age 44</div>
+                            <p>21 years of experience in the Automotive Industry and management roles. Served as BCM of H Block for the last couple of years. Though new to society management, passionate about serving the community with a practical, organized approach. Focuses on proper maintenance, safety and security, acting as a collective voice for residents, addressing grievances fairly, and enforcing community rules. Enjoys watching movies and volunteering in social service activities.</p>
+                        </div>
+
+                        <div class="team-member" id="jayjit">
+                            <div class="team-photo">
+                                <img src="images/jayjit.jpeg" alt="Jayjit Basu">
+                            </div>
+                            <h4>Jayjit Basu</h4>
+                            <div class="age">Age 51</div>
+                            <p>Science graduate with 28 years of professional experience and part of the Alpyne community for 10 years. Served as Treasurer for the last 2 years with strong administrative, technical, and problem-solving expertise. Focused on structural repairs to reduce water leaks in B1 and B2, improving clubhouse facilities. Plans installation of community EV charging stations and implementing sustainable solutions to lower utility costs. Enjoys trekking, exploring new technologies, and activities that promote health, happiness, and community bonding.</p>
+                        </div>
+                        
+                        <div class="team-member" id="mohan">
+                            <div class="team-photo">
+                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
+                            </div>
+                            <h4>Dr. Mohan M. S.</h4>
+                            <div class="age">Age 55</div>
+                            <p>Practicing as a Pediatrician, providing care to children for over two decades. As a member of the current MC team, played a key role in planning and executing the rainwater harvesting system at Alpyne. His hobbies include farming and trekking, reflecting his love for nature. In his second phase of service, intends to expand the rainwater harvesting project and explore individual flat water metering to promote fair and efficient water usage. Committed to making Alpyne greener, more sustainable, and well-managed.</p>
+                        </div>
+                    
+                        <div class="team-member" id="ashwin">
+                            <div class="team-photo">
+                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
+                            </div>
+                            <h4>Ashwin Kumar S G</h4>
+                            <div class="age">Age 40</div>
+                            <p>Software Engineer with a strong passion for social service and community development. Currently serving as President of Mantri Alpyne, he focuses on enhancing security, facilities, and the overall quality of life in the community. Previously served as Block Committee Member for H Block for 4 years. As a dedicated Rotary member, he led projects like donating hearing aids, organizing blood donation camps, and large health drives. His hobbies include badminton, painting, crafts, and volunteering for social causes. Committed to making Mantri Alpyne a safer, cleaner, and more vibrant place to live.</p>
+                        </div>
+                        
+                        <div class="team-member" id="jacob">
+                            <div class="team-photo">
+                                <img src="images/jacob.jpeg" alt="Jacob John">
+                            </div>
+                            <h4>Jacob John</h4>
+                            <div class="age">Age 51</div>
+                            <p>Jacob is a healthcare professional with over 25 years of experience, having cared for more than 50,000 patients. Alongside his healthcare career, he has been actively involved in community development and management for over 8 years. He is currently serving as the Secretary of the Mantri Alpyne Management Committee for the past two years. In this role, Jacob has worked closely with residents to solve key issues, improve community operations, and enhance the overall living experience. Jacob brings strong leadership, problem-solving skills, and a people-first approach to everything he does. He believes in teamwork, transparency, and creating a sustainable, inclusive community. Jacob is committed to continuing his efforts to strengthen our association and improve life for all residents of Namma Alpyne.</p>
+                        </div>
+                                                
+                        <div class="team-member" id="prakash">
+                            <div class="team-photo">
+                                <img src="images/prakash.jpeg" alt="R. Prakash">
+                            </div>
+                            <h4>R. Prakash</h4>
+                            <div class="age">Age 63</div>
+                            <p>Around 35 years of experience in major construction companies, specializing in engineering and maintenance. Served as BCM for 2 years and Vice President for 2 years of the current management committee. His hobbies include music, reading, world affairs, trekking, and cricket. Intends to promote the health and happiness of the society by encouraging performing arts, yoga, and dhyana. Committed to organizing activities like trekking and sports to bring residents together and foster a vibrant community.</p>
+                        </div>
+                        
+                        <div class="team-member" id="vishwas">
+                            <div class="team-photo">
+                                <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
+                            </div>
+                            <h4>Vishwas K. N.</h4>
+                            <div class="age">Age 43</div>
+                            <p>21 years of experience in software development and management. Served as Joint Secretary for the last 2 years with strong technical and administrative skills. Focused on Property Tax management, E-Khata, Association Data management, software automation, and process improvements. Passionate about building a process-driven Association with a strong framework to ensure sustained growth and improved welfare for all residents. Enjoys listening to music and exploring new technologies.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Promise Page -->
+        <div id="promise" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>Our Promise</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div class="legal-content">
+                        <h3>⭐ Our Goals</h3>
+                        <ul>
+                            <li>Keep our community safe, clean, and well-managed.</li>
+                            <li>Make fair decisions that help everyone, not just a few.</li>
+                            <li>Bring fresh ideas while continuing good work from the past.</li>
+                        </ul>
+                        
+                        <h3>✅ What We Promise</h3>
+                        <ul>
+                            <li><strong>Clear Communication:</strong> We will share important decisions and how money is used in a simple way.</li>
+                            <li><strong>Listening to Everyone:</strong> We will hear all residents before making big decisions.</li>
+                            <li><strong>Better Facilities:</strong> We will improve maintenance, facilities, and organize events for everyone.</li>
+                            <li><strong>Friendly Community:</strong> We will help make our community a friendly and caring place to live.</li>
+                            <li><strong>Well-Managed Living:</strong> We will work hard to keep our apartment one of the best-run places in the area.</li>
+                            <li><strong>Pride of Home:</strong> We will make sure every resident feels proud to live here.</li>
+                        </ul>
+                        
+                        <h3>👥 Our Team</h3>
+                        <ul>
+                            <li>Experienced members who understand how things work.</li>
+                            <li>New members with energy and fresh ideas.</li>
+                            <li>Together, we will serve all residents with fairness and care.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Progress Page -->
+        <div id="progress" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>🏡 Community Progress Report (2023-2025)</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div class="progress-category">
+                        <h4>🔒 Infrastructure, Property Documentation & Security Improvements</h4>
+                        <ul class="achievements">
+                            <li>Helped 800+ residents get BBMP e-KHATA for their properties - Enabled e-Khatha process at doorstep for all residents</li>
+                            <li>Cleared property tax dues for the clubhouse</li>
+                            <li>Installed boom barriers to control vehicle entry</li>
+                            <li>Marked parking slots and organized visitor parking</li>
+                            <li>Started MyGate system with UNISERVICE for safe and easy gate control</li>
+                            <li>Updated owner, maid, and staff records in MyGate and ADDA systems</li>
+                            <li>Added clear block-wise signs to help visitors and delivery people find their way</li>
+                            <li>Installed extra CCTV cameras to improve security</li>
+                            <li>Improved how we track and solve issues, so problems get fixed faster</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🌱 Facilities & Sustainability Upgrades</h4>
+                        <ul class="achievements">
+                            <li>Renovated clubhouse, toilets, and gym; renewed maintenance contracts</li>
+                            <li>Installed comfortable backrest benches for senior citizens.</li>
+                            <li>Fixed the fly problem around H and I blocks by improving wet waste management</li>
+                            <li>Fixed terrace leaks and connected STP water to avoid wastage</li>
+                            <li>Added borewells, cleaned rainwater systems, and repaired drainage to stop flooding</li>
+                            <li>Solved an 8-year-old water backflow issue with in-house help, saving costs</li>
+                            <li>Made the mini-forest zone cleaner and more inviting, encouraging more people to visit</li>
+                            <li>Installed handrails at important steps for the safety of senior citizens</li>
+                            <li>Set up drip irrigation in garden areas to water plants automatically and reduce manual work</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>💰 Smart Financial Management</h4>
+                        <ul class="achievements">
+                            <li>Collected old unpaid rent from commercial tenants like Reliance, Apollo, and GoGlam</li>
+                            <li>Reduced unpaid association dues from 10–12% to 2–3% by applying strict follow-ups</li>
+                            <li>Created new income sources: flea markets, dosa stalls, and display boards</li>
+                            <li>Started earning from scrap disposal</li>
+                            <li>Made the approval process for spending more transparent and organized</li>
+                            <li>Solved a long-standing legal case through friendly dialogue, and all dues were cleared</li>
+                            <li>Set up a Ramdev Medical shop in the old ATM space, providing medicines and rental income</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🤝 Civic Work & Public Services</h4>
+                        <ul class="achievements">
+                            <li>Worked with BBMP to resolve the long-standing betterment tax issue by fairly dividing it across all 1140 apartments, making it possible for every owner to get their e-Khata.</li>
+                            <li>Solved the long-standing underground drainage (UGD) connection problem by working with government agencies</li>
+                            <li>Followed up regularly with local officials to improve roads and add more streetlights</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Vision Page -->
+        <div id="vision" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>🚀 Our Vision For The Next Term</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        
+                        <p>In the last term, we worked hard to solve important legacy issues without adding extra cost to residents. With your trust, here's what we plan to do next:</p>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🔧 Service & Maintenance</h4>
+                        <ul>
+                            <li>Ensure Uniservice responds quickly and resolves issues faster</li>
+                            <li>Collaborate with the lift AMC vendor to prevent repeated breakdowns and ensure reliable service</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🚗 Security & Smart Solutions</h4>
+                        <ul>
+                            <li>Enhance car park security with cameras and smart technology solutions</li>
+                            <li>Raise and improve the compound wall for better safety and a neater appearance</li>
+                            <li>Install affordable EV charging points to support electric vehicles in our community</li>
+                            <li>Make security more efficient and use technology to keep our community safer</li>
+                            <li>Improve safety and emergency support specially for our senior citizens</li>
+                            <li>Build a financially strong association to ensure long-term stability and better services for all residents</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🏢 Clubhouse Improvements</h4>
+                        <ul>
+                            <li>Repair or replace the clubhouse AC to improve comfort for everyone</li>
+                            <li>Fix or replace old gym equipment to keep it safe and functional</li>
+                            <li>Paint and refresh the party hall to make it bright and inviting</li>
+                            <li>Introduce easy-to-use software for clubhouse access and hall booking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>📚 Infrastructure Revamp</h4>
+                        <ul>
+                            <li>Revamp and organize the library to make it useful and enjoyable for everyone again.</li>
+                            <li>Give a fresh look to the children’s play area and basketball court, making them safer and more fun for everyone.</li>
+                            <li>Add more benches with backrests along the driveway, so senior citizens have more places to relax.</li>
+                            <li>Repair damaged ceilings on ground floors of blocks</li>
+                            <li>Paint pergola structures at entrances to make them look nicer</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-category">
+                        <h4>🎉 Celebrations & Events</h4>
+                        <ul>
+                            <li>Collect residents’ ideas on how they’d like to contribute to festivals like Ganapathy Habba, Rajyotsava, and Independence Day, and simplify the contribution process with clear accounting</li>
+                            <li>Ensure celebrations and flea markets are well-organized, enjoyable, and do not cause excessive noise or crowding</li>
+                            <li>Make celebrations and events safe and enjoyable for all by setting simple, clear guidelines without causing inconvenience to others.</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <p>If we have missed anything you would like to see, please submit your suggestions on the <a href="#" data-page="support" class="inline-link">Support Us</a> page.</p>
+                        <br>
+                        <p> With your support, we will keep making practical, cost-friendly improvements for our community. Let's work together for a better, safer, and happier home.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Support Page -->
+        <div id="support" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>🤝 Support Us – Share Your Ideas</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <p style="font-size: 1.2rem; color: #64748b; max-width: 800px; margin: 0 auto;">
+                            Your voice matters! Help us make Namma Alpyne an even better place to live by sharing your suggestions, ideas, and feedback. Together, we can build a stronger, safer, and happier community.
+                        </p>
+                    </div>
+                   
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSS7ydxdBBcTdTJq2bTJEtXnhWtV213Esvr2nSoEDXdRab4Q/viewform?embedded=true" 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0"
+                                class="google-form">
+                            Loading…
+                        </iframe>
+                    </div>
+                    
+                    <!-- Call to action and additional information -->
+                    <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%); padding: 3rem 2rem; border-radius: 12px; margin: 3rem 0; text-align: center;">
+                        <h3 style="color: #1e40af; margin-bottom: 1rem;">🙏 Thank You for Your Support!</h3>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 2rem;">
+                            Every suggestion you share helps us understand your needs better and work towards making Mantri Alpyne a place we can all be proud to call home.
+                        </p>
+                        
+            <!-- Contact information -->
+                    <div style="text-align: center; margin: 2rem 0; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <p style="color: #64748b; margin-bottom: 1rem;">
+                            Prefer to reach out directly? You can also email us at:
+                        </p>
+                        <a href="mailto:namma.alpyne@gmail.com" style="color: #f97316; font-weight: 600; text-decoration: none; font-size: 1.1rem;">
+                            namma.alpyne@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Privacy Page -->
+        <div id="privacy" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>🔒 Privacy Policy</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div class="legal-content">
+                        <p>We respect your privacy and are committed to protecting your personal information.</p>
+                        
+                        <h3>1. What Information We Collect</h3>
+                        <p>When you fill out the <strong>Support Us</strong> form, we collect:</p>
+                        <ul>
+                            <li>Your Name</li>
+                            <li>Apartment Number</li>
+                            <li>Phone Number</li>
+                            <li>Your Suggestions</li>
+                        </ul>
+                        
+                        <h3>2. How We Use Your Information</h3>
+                        <p>We use your information only to:</p>
+                        <ul>
+                            <li>Understand your suggestions and feedback</li>
+                            <li>Improve our community services</li>
+                            <li>Contact you if needed about your suggestions</li>
+                        </ul>
+                        
+                        <h3>3. Your Information is Safe</h3>
+                        <p>We will never share your personal information with any third party or use it for marketing purposes. Your data is used only by our election team and is stored securely.</p>
+                        
+                        <h3>4. Your Rights</h3>
+                        <p>You can request us to delete your information anytime by contacting us at: <a href="mailto:namma.alpyne@gmail.com">Namma Alpyne Team</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Terms Page -->
+        <div id="terms" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2>📜 Terms and Conditions</h2>
+                    <p class="back-to-home">
+                        <a href="#" data-page="home">&larr; Back to Home</a>
+                    </p>
+                    
+                    <div class="legal-content">
+                        <p>Welcome to our Namma Alpyne Association Election Campaign website. By using this site, you agree to the following:</p>
+                        
+                        <ol>
+                            <li>The content on this website is for information only related to the association election.</li>
+                            <li>We try to keep all information accurate and up to date, but we are not responsible for any mistakes.</li>
+                            <li>Your use of the website is at your own risk.</li>
+                            <li>We do not guarantee that the website will always work without interruptions or errors.</li>
+                            <li>The suggestions you provide through the Support Us form will be used only to improve our community.</li>
+                            <li>We reserve the right to update these terms anytime without prior notice.</li>
+                        </ol>
+                        
+                        <h3>© Copyright Notice</h3>
+                        <p><strong>© 2025 Namma Alpyne Team</strong> All rights reserved.</p>
+                        <br>
+                        <p>No part of this website may be copied, shared, or reproduced in any form without written permission.</p>
+                        <br>
+                        <p>For more information write to: <a href="mailto:namma.alpyne@gmail.com">Namma Alpyne Team</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-links">
+                <a href="#" data-page="home">Home</a> |
+                <a href="#" data-page="privacy">Privacy Policy</a> |
+                <a href="#" data-page="terms">Terms &amp; Copyright</a> |
+                <a href="mailto:namma.alpyne@gmail.com">Contact Us</a>
+            </p>
+            <p>&copy; 2025 Namma Alpyne Team - Building a Safer, Stronger, Happier Community</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple navigation system using data attributes
+        function showPage(pageId, candidateId = null) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                
+                // Close mobile menu
+                closeNav();
+                
+                // Update page title
+                updatePageTitle(pageId);
+                
+                // If candidateId is provided, scroll to that candidate after a brief delay
+                if (candidateId) {
+                    setTimeout(() => {
+                        const candidateElement = document.getElementById(candidateId);
+                        if (candidateElement) {
+                            candidateElement.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                            // Add a highlight effect
+                            candidateElement.style.backgroundColor = '#fff3cd';
+                            setTimeout(() => {
+                                candidateElement.style.backgroundColor = '';
+                            }, 2000);
+                        }
+                    }, 100);
+                } else {
+                    // Scroll to top if no specific candidate
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+        }
+        
+        function updatePageTitle(pageId) {
+            const titles = {
+                'home': 'Namma Alpyne Team - Building a Stronger Community',
+                'team': 'Meet The Team - Namma Alpyne',
+                'promise': 'Our Promise - Namma Alpyne',
+                'progress': 'Progress Report - Namma Alpyne',
+                'vision': 'Our Vision - Namma Alpyne',
+                'support': 'Support Us - Namma Alpyne',
+                'privacy': 'Privacy Policy - Namma Alpyne',
+                'terms': 'Terms & Copyright - Namma Alpyne'
+            };
+            document.title = titles[pageId] || 'Namma Alpyne Team';
+        }
+        
+        function toggleNav() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        
+        function closeNav() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.addEventListener('click', toggleNav);
+            
+            // Overlay click to close menu
+            const overlay = document.querySelector('.overlay');
+            overlay.addEventListener('click', closeNav);
+            
+            // Navigation buttons
+            const navButtons = document.querySelectorAll('[data-page]');
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Candidate click handlers
+            const candidateElements = document.querySelectorAll('.candidate-clickable');
+            candidateElements.forEach(candidate => {
+                candidate.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const candidateId = this.getAttribute('data-candidate');
+                    showPage('team', candidateId);
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const navMenu = document.querySelector('.nav-menu');
+                const hamburger = document.querySelector('.hamburger');
+                
+                if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                    closeNav();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+                
