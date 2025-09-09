@@ -259,8 +259,8 @@
         /* Team Grid */
         .team-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
             margin: 2rem 0;
         }
         
@@ -487,6 +487,26 @@
         
         .overlay.active {
             display: block;
+        }
+        
+        /* Mobile-specific styles for candidate cards */
+        @media (max-width: 767px) {
+            .team-member {
+                padding: 1rem 0.5rem;
+            }
+            
+            .team-photo {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 0.5rem;
+                border-width: 2px;
+            }
+            
+            .team-member h4 {
+                font-size: 0.9rem;
+                margin-bottom: 0;
+                line-height: 1.2;
+            }
         }
     </style>
 </head>
