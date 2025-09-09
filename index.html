@@ -198,14 +198,14 @@
         }
         
         .btn-secondary {
-            background: white;
-            color: #1e40af;
-            border: 2px solid #1e40af;
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            border: none;
         }
         
         .btn-secondary:hover {
-            background: #1e40af;
-            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
         }
         
         /* Content Sections */
@@ -298,6 +298,17 @@
             color: #f97316;
             font-weight: 600;
             margin-bottom: 1rem;
+        }
+        
+        /* Clickable candidate styles */
+        .candidate-clickable {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .candidate-clickable:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
         /* Progress Report */
@@ -514,10 +525,83 @@
                     <h1>Namma Alpyne – Building a Safer, Stronger, Happier Community</h1>
                     <p>A team of experienced members and fresh faces, united by the goal to serve every resident with care, honesty, and fairness.</p>
                     
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" data-page="team"> Namma Alpyne Team</button>
-                        <button class="btn btn-secondary" data-page="progress"> Community Progress Report</button>
-                        <button class="btn btn-secondary" data-page="vision"> Our Vision </button>
+
+                </div>
+            </section>
+            
+            <!-- Candidates Section -->
+            <section class="section">
+                <div class="container">
+                    <h2>👥 Meet Our Candidates</h2>
+                    <p style="text-align: center; margin-bottom: 2rem;">Experienced professionals and dedicated community members committed to serving you</p>
+                    
+                    <div class="team-grid">
+                        <div class="team-member candidate-clickable" data-candidate="ramachandra">
+                            <div class="team-photo">
+                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                            </div>
+                            <h4>Ramachandra Rao G. S.</h4>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="sadashiva">
+                            <div class="team-photo">
+                                <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
+                            </div>
+                            <h4>Sadashiva Yogendra</h4>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="rajesh">
+                            <div class="team-photo">
+                                <img src="images/rajesh.jpeg" alt="Rajesh Shet">
+                            </div>
+                            <h4>Rajesh Shet</h4>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="jayjit">
+                            <div class="team-photo">
+                                <img src="images/jayjit.jpeg" alt="Jayjit Basu">
+                            </div>
+                            <h4>Jayjit Basu</h4>
+                        </div>
+                        
+                        <div class="team-member candidate-clickable" data-candidate="mohan">
+                            <div class="team-photo">
+                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
+                            </div>
+                            <h4>Dr. Mohan M. S.</h4>
+                        </div>
+                    
+                        <div class="team-member candidate-clickable" data-candidate="ashwin">
+                            <div class="team-photo">
+                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
+                            </div>
+                            <h4>Ashwin Kumar S G</h4>
+                        </div>
+                        
+                        <div class="team-member candidate-clickable" data-candidate="jacob">
+                            <div class="team-photo">
+                                <img src="images/jacob.jpeg" alt="Jacob John">
+                            </div>
+                            <h4>Jacob John</h4>
+                        </div>
+                                                
+                        <div class="team-member candidate-clickable" data-candidate="prakash">
+                            <div class="team-photo">
+                                <img src="images/prakash.jpeg" alt="R. Prakash">
+                            </div>
+                            <h4>R. Prakash</h4>
+                        </div>
+                        
+                        <div class="team-member candidate-clickable" data-candidate="vishwas">
+                            <div class="team-photo">
+                                <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
+                            </div>
+                            <h4>Vishwas K. N.</h4>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn btn-primary" data-page="team">Learn More About Our Team</button>
                     </div>
                 </div>
             </section>
@@ -528,6 +612,10 @@
                     <p>In the previous term, with your support we focused on solving many long-standing legacy issues that affected daily life in our community. Now, we shift focus toward improving the <strong>"Namma Alpyne Experience"</strong> for everyone with practical upgrades, smarter solutions, and better services. We are committed to making sure every resident feels proud to live here.</p>
                     <br>
                     <p>With your continued support, we aim to build a home that feels safer, cleaner, and more connected for all residents.</p>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn btn-secondary" data-page="progress">See Our Community Progress Report</button>
+                    </div>
                 </div>
             </section>
 
@@ -587,6 +675,10 @@
                     <p>Your feedback matters. If we missed something important, please share your thoughts on the <a href="#" data-page="support" class="inline-link">Support Us</a> page.</p>
                     
                     <div style="text-align: center; margin: 2rem 0;">
+                        <button class="btn btn-secondary" data-page="vision">Learn More About Our Vision</button>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
                         <h3> Your Vote is Our Strength 🙏 </h3>
                         <p>Let's work together to make Mantri Alpyne a happier, safer, and smarter home for all.</p>
                         <br>
@@ -608,7 +700,7 @@
                     </p>
                     
                     <div class="team-grid">
-                        <div class="team-member">
+                        <div class="team-member" id="ramachandra">
                             <div class="team-photo">
                                 <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
                             </div>
@@ -617,7 +709,7 @@
                             <p>Over 40 years of experience in the telecom sector, including 30 years of field work and 10 years in administration as AGM and DGM at BSNL. Strong volunteer for the Ganesha Mantapa, contributing to temple management and community activities. Though new to society management, committed to serving with dedication and care. Focuses on transparency, discipline, and practical solutions. Enjoys community service and social welfare activities.</p>
                         </div>
 
-                        <div class="team-member">
+                        <div class="team-member" id="sadashiva">
                             <div class="team-photo">
                                 <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
                             </div>
@@ -626,7 +718,7 @@
                             <p>23 years of experience in the IT industry with strong technical and management skills, managed two startup companies. Though new to society management, eager to contribute expertise for the community's benefit. His interests include finance, economics, and history, helping him take a thoughtful, balanced approach to problem solving. Dedicated to creating a positive, well-managed environment for all residents. Enjoys reading about economic trends and historical events.</p>
                         </div>
 
-                        <div class="team-member">
+                        <div class="team-member" id="rajesh">
                             <div class="team-photo">
                                 <img src="images/rajesh.jpeg" alt="Rajesh Shet">
                             </div>
@@ -635,7 +727,7 @@
                             <p>21 years of experience in the Automotive Industry and management roles. Served as BCM of H Block for the last couple of years. Though new to society management, passionate about serving the community with a practical, organized approach. Focuses on proper maintenance, safety and security, acting as a collective voice for residents, addressing grievances fairly, and enforcing community rules. Enjoys watching movies and volunteering in social service activities.</p>
                         </div>
 
-                        <div class="team-member">
+                        <div class="team-member" id="jayjit">
                             <div class="team-photo">
                                 <img src="images/jayjit.jpeg" alt="Jayjit Basu">
                             </div>
@@ -644,7 +736,7 @@
                             <p>Science graduate with 28 years of professional experience and part of the Alpyne community for 10 years. Served as Treasurer for the last 2 years with strong administrative, technical, and problem-solving expertise. Focused on structural repairs to reduce water leaks in B1 and B2, improving clubhouse facilities. Plans installation of community EV charging stations and implementing sustainable solutions to lower utility costs. Enjoys trekking, exploring new technologies, and activities that promote health, happiness, and community bonding.</p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" id="mohan">
                             <div class="team-photo">
                                 <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
                             </div>
@@ -653,7 +745,7 @@
                             <p>Practicing as a Pediatrician, providing care to children for over two decades. As a member of the current MC team, played a key role in planning and executing the rainwater harvesting system at Alpyne. His hobbies include farming and trekking, reflecting his love for nature. In his second phase of service, intends to expand the rainwater harvesting project and explore individual flat water metering to promote fair and efficient water usage. Committed to making Alpyne greener, more sustainable, and well-managed.</p>
                         </div>
                     
-                        <div class="team-member">
+                        <div class="team-member" id="ashwin">
                             <div class="team-photo">
                                 <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
                             </div>
@@ -662,7 +754,7 @@
                             <p>Software Engineer with a strong passion for social service and community development. Currently serving as President of Mantri Alpyne, he focuses on enhancing security, facilities, and the overall quality of life in the community. Previously served as Block Committee Member for H Block for 4 years. As a dedicated Rotary member, he led projects like donating hearing aids, organizing blood donation camps, and large health drives. His hobbies include badminton, painting, crafts, and volunteering for social causes. Committed to making Mantri Alpyne a safer, cleaner, and more vibrant place to live.</p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" id="jacob">
                             <div class="team-photo">
                                 <img src="images/jacob.jpeg" alt="Jacob John">
                             </div>
@@ -671,7 +763,7 @@
                             <p>Jacob is a healthcare professional with over 25 years of experience, having cared for more than 50,000 patients. Alongside his healthcare career, he has been actively involved in community development and management for over 8 years. He is currently serving as the Secretary of the Mantri Alpyne Management Committee for the past two years. In this role, Jacob has worked closely with residents to solve key issues, improve community operations, and enhance the overall living experience. Jacob brings strong leadership, problem-solving skills, and a people-first approach to everything he does. He believes in teamwork, transparency, and creating a sustainable, inclusive community. Jacob is committed to continuing his efforts to strengthen our association and improve life for all residents of Namma Alpyne.</p>
                         </div>
                                                 
-                        <div class="team-member">
+                        <div class="team-member" id="prakash">
                             <div class="team-photo">
                                 <img src="images/prakash.jpeg" alt="R. Prakash">
                             </div>
@@ -680,7 +772,7 @@
                             <p>Around 35 years of experience in major construction companies, specializing in engineering and maintenance. Served as BCM for 2 years and Vice President for 2 years of the current management committee. His hobbies include music, reading, world affairs, trekking, and cricket. Intends to promote the health and happiness of the society by encouraging performing arts, yoga, and dhyana. Committed to organizing activities like trekking and sports to bring residents together and foster a vibrant community.</p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" id="vishwas">
                             <div class="team-photo">
                                 <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
                             </div>
@@ -873,11 +965,39 @@
         <div id="support" class="page">
             <section class="section">
                 <div class="container">
+                    <h2>🤝 Support Us – Share Your Ideas</h2>
                     <p class="back-to-home">
                         <a href="#" data-page="home">&larr; Back to Home</a>
                     </p>
                     
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <p style="font-size: 1.2rem; color: #64748b; max-width: 800px; margin: 0 auto;">
+                            Your voice matters! Help us make Namma Alpyne an even better place to live by sharing your suggestions, ideas, and feedback. Together, we can build a stronger, safer, and happier community.
+                        </p>
+                    </div>
+                    
+                    <!-- Features highlighting why to provide feedback -->
+                    <div class="features" style="margin: 3rem 0;">
+                        <div class="feature">
+                            <h4>💡 Share Your Ideas</h4>
+                            <p>Got suggestions for improving our community? We want to hear them! Your creative ideas can help shape our future initiatives.</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🗣️ Voice Your Concerns</h4>
+                            <p>Help us understand what matters most to you. Your feedback guides our priorities and decision-making process.</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🤝 Join the Conversation</h4>
+                            <p>Be part of building our community's future. Every suggestion helps us serve you better and create positive change.</p>
+                        </div>
+                    </div>
+                    
                     <div class="form-section">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <h3 style="color: #1e40af; margin-bottom: 1rem;">📝 Share Your Thoughts</h3>
+                            <p style="color: #64748b;">Fill out the form below to send us your suggestions, feedback, or any ideas you have for our community.</p>
+                        </div>
+                        
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSS7ydxdBBcTdTJq2bTJEtXnhWtV213Esvr2nSoEDXdRab4Q/viewform?embedded=true" 
                                 width="100%" 
                                 height="100%" 
@@ -889,10 +1009,27 @@
                         </iframe>
                     </div>
                     
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <p><strong>🙏 Thank you for your support and valuable feedback!</strong></p>
-                        <br>
-                        <p>Together, we can make Mantri Alpyne an even better place live.</p>
+                    <!-- Call to action and additional information -->
+                    <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%); padding: 3rem 2rem; border-radius: 12px; margin: 3rem 0; text-align: center;">
+                        <h3 style="color: #1e40af; margin-bottom: 1rem;">🙏 Thank You for Your Support!</h3>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 2rem;">
+                            Every suggestion you share helps us understand your needs better and work towards making Mantri Alpyne a place we can all be proud to call home.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 300px; margin: 0 auto;">
+                            <button class="btn btn-primary" data-page="team">Meet Our Team</button>
+                            <button class="btn btn-secondary" data-page="vision">See Our Vision</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact information -->
+                    <div style="text-align: center; margin: 2rem 0; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <p style="color: #64748b; margin-bottom: 1rem;">
+                            Prefer to reach out directly? You can also email us at:
+                        </p>
+                        <a href="mailto:namma.alpyne@gmail.com" style="color: #f97316; font-weight: 600; text-decoration: none; font-size: 1.1rem;">
+                            namma.alpyne@gmail.com
+                        </a>
                     </div>
                 </div>
             </section>
@@ -984,7 +1121,7 @@
 
     <script>
         // Simple navigation system using data attributes
-        function showPage(pageId) {
+        function showPage(pageId, candidateId = null) {
             // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => {
@@ -999,11 +1136,29 @@
                 // Close mobile menu
                 closeNav();
                 
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                
                 // Update page title
                 updatePageTitle(pageId);
+                
+                // If candidateId is provided, scroll to that candidate after a brief delay
+                if (candidateId) {
+                    setTimeout(() => {
+                        const candidateElement = document.getElementById(candidateId);
+                        if (candidateElement) {
+                            candidateElement.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                            // Add a highlight effect
+                            candidateElement.style.backgroundColor = '#fff3cd';
+                            setTimeout(() => {
+                                candidateElement.style.backgroundColor = '';
+                            }, 2000);
+                        }
+                    }, 100);
+                } else {
+                    // Scroll to top if no specific candidate
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             }
         }
         
@@ -1058,6 +1213,16 @@
                     e.preventDefault();
                     const pageId = this.getAttribute('data-page');
                     showPage(pageId);
+                });
+            });
+            
+            // Candidate click handlers
+            const candidateElements = document.querySelectorAll('.candidate-clickable');
+            candidateElements.forEach(candidate => {
+                candidate.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const candidateId = this.getAttribute('data-candidate');
+                    showPage('team', candidateId);
                 });
             });
             
