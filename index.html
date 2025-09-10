@@ -259,15 +259,9 @@
         /* Team Grid */
         .team-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        /* Home page candidate grid - mobile 3x3 layout */
-        #home .team-grid {
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
+            margin: 2rem 0;
         }
         
         .team-member {
@@ -304,6 +298,12 @@
             color: #f97316;
             font-weight: 600;
             margin-bottom: 1rem;
+        }
+        
+        .team-member .candidate-details {
+            color: #f97316;
+            font-weight: 600;
+            font-size: 0.9rem;
         }
         
         /* Clickable candidate styles */
@@ -495,20 +495,20 @@
             display: block;
         }
         
-        /* Mobile-specific styles for candidate cards - only on home page */
+        /* Mobile-specific styles for candidate cards */
         @media (max-width: 767px) {
-            #home .team-member {
+            .team-member {
                 padding: 1rem 0.5rem;
             }
             
-            #home .team-photo {
+            .team-photo {
                 width: 60px;
                 height: 60px;
                 margin: 0 auto 0.5rem;
                 border-width: 2px;
             }
             
-            #home .team-member h4 {
+            .team-member h4 {
                 font-size: 0.9rem;
                 margin-bottom: 0;
                 line-height: 1.2;
@@ -535,9 +535,10 @@
             <ul>
                 <li><button data-page="home">Home</button></li>
                 <li><button data-page="team">Namma Alpyne Team</button></li>
+                <li><button data-page="promise">Our Promise</button></li>
                 <li><button data-page="progress">Community Progress Report</button></li>
                 <li><button data-page="vision">Our Vision</button></li>
-                <li><button data-page="support">Share Your Suggestions</button></li>
+                <li><button data-page="support">Support Us</button></li>
             </ul>
         </nav>
     </header>
@@ -559,46 +560,12 @@
                 <div class="container">
                     <h2>👥 Meet Our Candidates</h2>   
                     <div class="team-grid">
-                        <div class="team-member candidate-clickable" data-candidate="ramachandra">
+                        <div class="team-member candidate-clickable" data-candidate="prakash">
                             <div class="team-photo">
-                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                                <img src="images/prakash.jpeg" alt="R. Prakash">
                             </div>
-                            <h4>Ramachandra Rao G. S.</h4>
-                        </div>
-
-                        <div class="team-member candidate-clickable" data-candidate="sadashiva">
-                            <div class="team-photo">
-                                <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
-                            </div>
-                            <h4>Sadashiva Yogendra</h4>
-                        </div>
-
-                        <div class="team-member candidate-clickable" data-candidate="rajesh">
-                            <div class="team-photo">
-                                <img src="images/rajesh.jpeg" alt="Rajesh Shet">
-                            </div>
-                            <h4>Rajesh Shet</h4>
-                        </div>
-
-                        <div class="team-member candidate-clickable" data-candidate="jayjit">
-                            <div class="team-photo">
-                                <img src="images/jayjit.jpeg" alt="Jayjit Basu">
-                            </div>
-                            <h4>Jayjit Basu</h4>
-                        </div>
-                        
-                        <div class="team-member candidate-clickable" data-candidate="mohan">
-                            <div class="team-photo">
-                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
-                            </div>
-                            <h4>Dr. Mohan M. S.</h4>
-                        </div>
-                    
-                        <div class="team-member candidate-clickable" data-candidate="ashwin">
-                            <div class="team-photo">
-                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
-                            </div>
-                            <h4>Ashwin Kumar S G</h4>
+                            <h4>R. Prakash</h4>
+                            <div class="candidate-details">Ballot No: 1 | Apt: E-0005</div>
                         </div>
                         
                         <div class="team-member candidate-clickable" data-candidate="jacob">
@@ -606,13 +573,15 @@
                                 <img src="images/jacob.jpeg" alt="Jacob John">
                             </div>
                             <h4>Jacob John</h4>
+                            <div class="candidate-details">Ballot No: 2 | Apt: J-0708</div>
                         </div>
-                                                
-                        <div class="team-member candidate-clickable" data-candidate="prakash">
+
+                        <div class="team-member candidate-clickable" data-candidate="ashwin">
                             <div class="team-photo">
-                                <img src="images/prakash.jpeg" alt="R. Prakash">
+                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
                             </div>
-                            <h4>R. Prakash</h4>
+                            <h4>Ashwin Kumar S G</h4>
+                            <div class="candidate-details">Ballot No: 3 | Apt: H-0104</div>
                         </div>
                         
                         <div class="team-member candidate-clickable" data-candidate="vishwas">
@@ -620,6 +589,47 @@
                                 <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
                             </div>
                             <h4>Vishwas K. N.</h4>
+                            <div class="candidate-details">Ballot No: 4 | Apt: C-0803</div>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="mohan">
+                            <div class="team-photo">
+                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
+                            </div>
+                            <h4>Dr. Mohan M. S.</h4>
+                            <div class="candidate-details">Ballot No: 5 | Apt: H-1104</div>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="sadashiva">
+                            <div class="team-photo">
+                                <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
+                            </div>
+                            <h4>Sadashiva Yogendra</h4>
+                            <div class="candidate-details">Ballot No: 6 | Apt: K-1105</div>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="ramachandra">
+                            <div class="team-photo">
+                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                            </div>
+                            <h4>Ramachandra Rao G. S.</h4>
+                            <div class="candidate-details">Ballot No: 7 | Apt: J-0004</div>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="rajesh">
+                            <div class="team-photo">
+                                <img src="images/rajesh.jpeg" alt="Rajesh Shet">
+                            </div>
+                            <h4>Rajesh Shet</h4>
+                            <div class="candidate-details">Ballot No: 8 | Apt: H-0205</div>
+                        </div>
+
+                        <div class="team-member candidate-clickable" data-candidate="jayjit">
+                            <div class="team-photo">
+                                <img src="images/jayjit.jpeg" alt="Jayjit Basu">
+                            </div>
+                            <h4>Jayjit Basu</h4>
+                            <div class="candidate-details">Ballot No: 9 | Apt: C-0001</div>
                         </div>
                     </div>
                     
@@ -636,7 +646,7 @@
                     <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <p>In the previous term, with your support we focused on solving many long-standing legacy issues that affected daily life in our community. Now, we shift focus toward improving the <strong>"Namma Alpyne Experience"</strong> for everyone with practical upgrades, smarter solutions, and better services. We are committed to making sure every resident feels proud to live here.</p>
                         <br>
-                        <p><strong>With your continued support, we aim to build a home that feels safer, cleaner, and more connected for all residents.</strong></p>
+                        <p>With your continued support, we aim to build a home that feels safer, cleaner, and more connected for all residents.</p>
                     </div>
                     
                     <div style="text-align: center; margin-top: 2rem;">
@@ -652,7 +662,7 @@
                     <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <p>Thank you all for your cooperation and support over the last two years. We have learned a lot by interacting with you, and if elected again, we promise to apply these learnings to serve you better. We welcome all suggestions to make Namma Alpyne safer, stronger and happier community.</p>
                         <br>
-                        <p><strong>We humbly request your valuable vote to continue this journey together. 🙏🏼 </strong> </p>
+                        <p>We humbly request 🙏🏼 your valuable vote to continue this journey together. </p>
                     </div>
                 </div>
             </section>
@@ -694,14 +704,14 @@
                 <div class="container">
                     <h2>🚀 Our Mission for the Next Term</h2>
                     
-                   <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li>⚡ Improve service response time and fix common issues faster</li>
-                            <li>🔌 Add EV charging points and smart parking solutions</li>
-                            <li>🛠️ Upgrade the clubhouse, gym, library, and kids play area</li>
-                            <li>🌱 Promote sustainability with better water and energy management</li>
-                            <li>🎉 Make community events well-organized, safe, and enjoyable</li>
-                            <li>💡 Carefully listen to your suggestions and ideas, and put them into action</li>
+                    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <ul>
+                            <li>Improve service response time and fix common issues faster</li>
+                            <li>Add EV charging points and smart parking solutions</li>
+                            <li>Upgrade the clubhouse, gym, library and kids play area</li>
+                            <li>Promote sustainability with better water and energy management</li>
+                            <li>Make community events well-organized, safe, and enjoyable</li>
+                            <li>Carefully listen to your suggestions and ideas, and put them into action</li>
                         </ul>
                     </div>
                     
@@ -714,7 +724,7 @@
                         <p>Let's work together to make Mantri Alpyne a happier, safer, and smarter home for all.</p>
                         <br>
                         <div class="cta-buttons">
-                            <button class="btn btn-primary" data-page="support"> Share Your Suggestions</button>
+                            <button class="btn btn-primary" data-page="support"> Support Us – Share Your Suggestions</button>
                         </div>
                     </div>
                 </div>
@@ -731,13 +741,54 @@
                     </p>
                     
                     <div class="team-grid">
-                        <div class="team-member" id="ramachandra">
+                        <div class="team-member" id="prakash">
                             <div class="team-photo">
-                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                                <img src="images/prakash.jpeg" alt="R. Prakash">
                             </div>
-                            <h4>Ramachandra Rao G. S.</h4>
-                            <div class="age">Age 68</div>
-                            <p>Over 40 years of experience in the telecom sector, including 30 years of field work and 10 years in administration as AGM and DGM at BSNL. Strong volunteer for the Ganesha Mantapa, contributing to temple management and community activities. Though new to society management, committed to serving with dedication and care. Focuses on transparency, discipline, and practical solutions. Enjoys community service and social welfare activities.</p>
+                            <h4>R. Prakash</h4>
+                            <div class="candidate-details">Ballot No: 1 | Apt: E-0005</div>
+                            <div class="age">Age 63</div>
+                            <p>Around 35 years of experience in major construction companies, specializing in engineering and maintenance. Served as BCM for 2 years and Vice President for 2 years of the current management committee. His hobbies include music, reading, world affairs, trekking, and cricket. Intends to promote the health and happiness of the society by encouraging performing arts, yoga, and dhyana. Committed to organizing activities like trekking and sports to bring residents together and foster a vibrant community.</p>
+                        </div>
+                        
+                        <div class="team-member" id="jacob">
+                            <div class="team-photo">
+                                <img src="images/jacob.jpeg" alt="Jacob John">
+                            </div>
+                            <h4>Jacob John</h4>
+                            <div class="candidate-details">Ballot No: 2 | Apt: J-0708</div>
+                            <div class="age">Age 51</div>
+                            <p>Jacob is a healthcare professional with over 25 years of experience, having cared for more than 50,000 patients. Alongside his healthcare career, he has been actively involved in community development and management for over 8 years. He is currently serving as the Secretary of the Mantri Alpyne Management Committee for the past two years. In this role, Jacob has worked closely with residents to solve key issues, improve community operations, and enhance the overall living experience. Jacob brings strong leadership, problem-solving skills, and a people-first approach to everything he does. He believes in teamwork, transparency, and creating a sustainable, inclusive community. Jacob is committed to continuing his efforts to strengthen our association and improve life for all residents of Namma Alpyne.</p>
+                        </div>
+
+                        <div class="team-member" id="ashwin">
+                            <div class="team-photo">
+                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
+                            </div>
+                            <h4>Ashwin Kumar S G</h4>
+                            <div class="candidate-details">Ballot No: 3 | Apt: H-0104</div>
+                            <div class="age">Age 40</div>
+                            <p>Software Engineer with a strong passion for social service and community development. Currently serving as President of Mantri Alpyne, he focuses on enhancing security, facilities, and the overall quality of life in the community. Previously served as Block Committee Member for H Block for 4 years. As a dedicated Rotary member, he led projects like donating hearing aids, organizing blood donation camps, and large health drives. His hobbies include badminton, painting, crafts, and volunteering for social causes. Committed to making Mantri Alpyne a safer, cleaner, and more vibrant place to live.</p>
+                        </div>
+
+                        <div class="team-member" id="vishwas">
+                            <div class="team-photo">
+                                <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
+                            </div>
+                            <h4>Vishwas K. N.</h4>
+                            <div class="candidate-details">Ballot No: 4 | Apt: C-0803</div>
+                            <div class="age">Age 43</div>
+                            <p>21 years of experience in software development and management. Served as Joint Secretary for the last 2 years with strong technical and administrative skills. Focused on Property Tax management, E-Khata, Association Data management, software automation, and process improvements. Passionate about building a process-driven Association with a strong framework to ensure sustained growth and improved welfare for all residents. Enjoys listening to music and exploring new technologies.</p>
+                        </div>
+                        
+                        <div class="team-member" id="mohan">
+                            <div class="team-photo">
+                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
+                            </div>
+                            <h4>Dr. Mohan M. S.</h4>
+                            <div class="candidate-details">Ballot No: 5 | Apt: H-1104</div>
+                            <div class="age">Age 55</div>
+                            <p>Practicing as a Pediatrician, providing care to children for over two decades. As a member of the current MC team, played a key role in planning and executing the rainwater harvesting system at Alpyne. His hobbies include farming and trekking, reflecting his love for nature. In his second phase of service, intends to expand the rainwater harvesting project and explore individual flat water metering to promote fair and efficient water usage. Committed to making Alpyne greener, more sustainable, and well-managed.</p>
                         </div>
 
                         <div class="team-member" id="sadashiva">
@@ -745,8 +796,19 @@
                                 <img src="images/sadashiva.jpeg" alt="Sadashiva Yogendra">
                             </div>
                             <h4>Sadashiva Yogendra</h4>
+                            <div class="candidate-details">Ballot No: 6 | Apt: K-1105</div>
                             <div class="age">Age 46</div>
                             <p>23 years of experience in the IT industry with strong technical and management skills, managed two startup companies. Though new to society management, eager to contribute expertise for the community's benefit. His interests include finance, economics, and history, helping him take a thoughtful, balanced approach to problem solving. Dedicated to creating a positive, well-managed environment for all residents. Enjoys reading about economic trends and historical events.</p>
+                        </div>
+
+                        <div class="team-member" id="ramachandra">
+                            <div class="team-photo">
+                                <img src="images/ramachandra.jpeg" alt="Ramachandra Rao G. S.">
+                            </div>
+                            <h4>Ramachandra Rao G. S.</h4>
+                            <div class="candidate-details">Ballot No: 7 | Apt: J-0004</div>
+                            <div class="age">Age 68</div>
+                            <p>Over 40 years of experience in the telecom sector, including 30 years of field work and 10 years in administration as AGM and DGM at BSNL. Strong volunteer for the Ganesha Mantapa, contributing to temple management and community activities. Though new to society management, committed to serving with dedication and care. Focuses on transparency, discipline, and practical solutions. Enjoys community service and social welfare activities.</p>
                         </div>
 
                         <div class="team-member" id="rajesh">
@@ -754,6 +816,7 @@
                                 <img src="images/rajesh.jpeg" alt="Rajesh Shet">
                             </div>
                             <h4>Rajesh Shet</h4>
+                            <div class="candidate-details">Ballot No: 8 | Apt: H-0205</div>
                             <div class="age">Age 44</div>
                             <p>21 years of experience in the Automotive Industry and management roles. Served as BCM of H Block for the last couple of years. Though new to society management, passionate about serving the community with a practical, organized approach. Focuses on proper maintenance, safety and security, acting as a collective voice for residents, addressing grievances fairly, and enforcing community rules. Enjoys watching movies and volunteering in social service activities.</p>
                         </div>
@@ -763,55 +826,11 @@
                                 <img src="images/jayjit.jpeg" alt="Jayjit Basu">
                             </div>
                             <h4>Jayjit Basu</h4>
+                            <div class="candidate-details">Ballot No: 9 | Apt: C-0001</div>
                             <div class="age">Age 51</div>
                             <p>Science graduate with 28 years of professional experience and part of the Alpyne community for 10 years. Served as Treasurer for the last 2 years with strong administrative, technical, and problem-solving expertise. Focused on structural repairs to reduce water leaks in B1 and B2, improving clubhouse facilities. Plans installation of community EV charging stations and implementing sustainable solutions to lower utility costs. Enjoys trekking, exploring new technologies, and activities that promote health, happiness, and community bonding.</p>
                         </div>
-                        
-                        <div class="team-member" id="mohan">
-                            <div class="team-photo">
-                                <img src="images/mohan.jpeg" alt="Dr. Mohan M. S.">
-                            </div>
-                            <h4>Dr. Mohan M. S.</h4>
-                            <div class="age">Age 55</div>
-                            <p>Practicing as a Pediatrician, providing care to children for over two decades. As a member of the current MC team, played a key role in planning and executing the rainwater harvesting system at Alpyne. His hobbies include farming and trekking, reflecting his love for nature. In his second phase of service, intends to expand the rainwater harvesting project and explore individual flat water metering to promote fair and efficient water usage. Committed to making Alpyne greener, more sustainable, and well-managed.</p>
-                        </div>
-                    
-                        <div class="team-member" id="ashwin">
-                            <div class="team-photo">
-                                <img src="images/ashwin.jpeg" alt="Ashwin Kumar S G">
-                            </div>
-                            <h4>Ashwin Kumar S G</h4>
-                            <div class="age">Age 40</div>
-                            <p>Software Engineer with a strong passion for social service and community development. Currently serving as President of Mantri Alpyne, he focuses on enhancing security, facilities, and the overall quality of life in the community. Previously served as Block Committee Member for H Block for 4 years. As a dedicated Rotary member, he led projects like donating hearing aids, organizing blood donation camps, and large health drives. His hobbies include badminton, painting, crafts, and volunteering for social causes. Committed to making Mantri Alpyne a safer, cleaner, and more vibrant place to live.</p>
-                        </div>
-                        
-                        <div class="team-member" id="jacob">
-                            <div class="team-photo">
-                                <img src="images/jacob.jpeg" alt="Jacob John">
-                            </div>
-                            <h4>Jacob John</h4>
-                            <div class="age">Age 51</div>
-                            <p>Jacob is a healthcare professional with over 25 years of experience, having cared for more than 50,000 patients. Alongside his healthcare career, he has been actively involved in community development and management for over 8 years. He is currently serving as the Secretary of the Mantri Alpyne Management Committee for the past two years. In this role, Jacob has worked closely with residents to solve key issues, improve community operations, and enhance the overall living experience. Jacob brings strong leadership, problem-solving skills, and a people-first approach to everything he does. He believes in teamwork, transparency, and creating a sustainable, inclusive community. Jacob is committed to continuing his efforts to strengthen our association and improve life for all residents of Namma Alpyne.</p>
-                        </div>
-                                                
-                        <div class="team-member" id="prakash">
-                            <div class="team-photo">
-                                <img src="images/prakash.jpeg" alt="R. Prakash">
-                            </div>
-                            <h4>R. Prakash</h4>
-                            <div class="age">Age 63</div>
-                            <p>Around 35 years of experience in major construction companies, specializing in engineering and maintenance. Served as BCM for 2 years and Vice President for 2 years of the current management committee. His hobbies include music, reading, world affairs, trekking, and cricket. Intends to promote the health and happiness of the society by encouraging performing arts, yoga, and dhyana. Committed to organizing activities like trekking and sports to bring residents together and foster a vibrant community.</p>
-                        </div>
-                        
-                        <div class="team-member" id="vishwas">
-                            <div class="team-photo">
-                                <img src="images/vishwas.jpeg" alt="Vishwas K. N.">
-                            </div>
-                            <h4>Vishwas K. N.</h4>
-                            <div class="age">Age 43</div>
-                            <p>21 years of experience in software development and management. Served as Joint Secretary for the last 2 years with strong technical and administrative skills. Focused on Property Tax management, E-Khata, Association Data management, software automation, and process improvements. Passionate about building a process-driven Association with a strong framework to ensure sustained growth and improved welfare for all residents. Enjoys listening to music and exploring new technologies.</p>
-                        </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -984,7 +1003,7 @@
                     </div>
                     
                     <div style="text-align: center; margin: 2rem 0;">
-                        <p>If we have missed anything you would like to see, please submit your suggestions on the <a href="#" data-page="support" class="inline-link">Share Your Suggestions</a> page.</p>
+                        <p>If we have missed anything you would like to see, please submit your suggestions on the <a href="#" data-page="support" class="inline-link">Support Us</a> page.</p>
                         <br>
                         <p> With your support, we will keep making practical, cost-friendly improvements for our community. Let's work together for a better, safer, and happier home.</p>
                     </div>
@@ -996,7 +1015,7 @@
         <div id="support" class="page">
             <section class="section">
                 <div class="container">
-                    <h2>🤝 Share Your Ideas</h2>
+                    <h2>🤝 Support Us – Share Your Ideas</h2>
                     <p class="back-to-home">
                         <a href="#" data-page="home">&larr; Back to Home</a>
                     </p>
